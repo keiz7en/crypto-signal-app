@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    experimental: {
-        serverComponentsExternalPackages: ['node-binance-api', 'openai']
-    },
+    serverExternalPackages: ['node-binance-api', 'openai'],
     env: {
         OPENAI_API_KEY: process.env.OPENAI_API_KEY,
         BINANCE_API_KEY: process.env.BINANCE_API_KEY,
@@ -11,7 +9,6 @@ const nextConfig = {
         NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL,
     },
     // Optimize for production
-    swcMinify: true,
     poweredByHeader: false,
     // Handle external packages
     webpack: (config) => {
@@ -30,9 +27,6 @@ const nextConfig = {
     },
   eslint: {
     ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
   },
   images: {
     unoptimized: true,
