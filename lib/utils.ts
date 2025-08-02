@@ -202,8 +202,6 @@ function getRealisticPrice(symbol: string): number {
         'LRCUSDT': 0.35 + getRandom(-0.03, 0.03),  // ~$0.35 ± $0.03
         'IMXUSDT': 1.8 + getRandom(-0.2, 0.2),     // ~$1.80 ± $0.20
         'STRKUSDT': 0.65 + getRandom(-0.1, 0.1),   // ~$0.65 ± $0.10
-        'CHZUSDT': 0.085 + getRandom(-0.01, 0.01), // ~$0.085 ± $0.01
-        'FLOWUSDT': 0.85 + getRandom(-0.1, 0.1),   // ~$0.85 ± $0.10
 
         // Meme Coins
         'SHIBUSDT': 0.000028 + getRandom(-0.000005, 0.000005), // ~$0.000028
