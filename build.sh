@@ -1,7 +1,6 @@
 #!/bin/bash
-
-# Install dependencies with npm
+echo "Forcing npm usage for build..."
+export USE_NPM=true
+export DISABLE_PNPM=true
 npm install
-
-# Build the application
 npm run build

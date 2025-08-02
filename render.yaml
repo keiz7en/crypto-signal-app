@@ -3,7 +3,7 @@ services:
     name: crypto-signal-app
     env: node
     plan: free
-    buildCommand: npm install && npm run build
+    buildCommand: bash build.sh
     startCommand: npm start
     envVars:
       - key: NODE_ENV
@@ -14,6 +14,10 @@ services:
         value: false
       - key: NPM_CONFIG_AUDIT
         value: false
+      - key: USE_NPM
+        value: true
+      - key: DISABLE_PNPM
+        value: true
       - key: OPENAI_API_KEY
         value: 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
       - key: BINANCE_API_KEY
