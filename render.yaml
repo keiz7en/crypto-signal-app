@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: crypto-signal-app
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: OPENAI_API_KEY
+        value: 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
+      - key: BINANCE_API_KEY
+        value: your_binance_api_key_here
+      - key: BINANCE_API_SECRET
+        value: your_binance_api_secret_here
+      - key: NEWS_API_KEY
+        value: your_news_api_key_here
+      - key: NEXT_PUBLIC_APP_URL
+        value: https://crypto-signal-app-15ka.onrender.com
