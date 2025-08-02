@@ -229,7 +229,6 @@ function getRealisticPrice(symbol: string): number {
         'MANAUSDT': 0.65 + getRandom(-0.08, 0.08), // ~$0.65 ± $0.08
         'ENJUSDT': 0.35 + getRandom(-0.05, 0.05),  // ~$0.35 ± $0.05
         'GALAUSDT': 0.045 + getRandom(-0.008, 0.008), // ~$0.045 ± $0.008
-        'CHZUSDT': 0.085 + getRandom(-0.01, 0.01), // ~$0.085 ± $0.01
         'FLOWUSDT': 0.85 + getRandom(-0.1, 0.1),   // ~$0.85 ± $0.10
 
         // Exchange Tokens
