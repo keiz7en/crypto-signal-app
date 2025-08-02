@@ -18,7 +18,7 @@ export const config = {
     openai: {
         apiKey: process.env.OPENAI_API_KEY || '',
         model: 'gpt-4o-mini', // Fast and cost-effective model
-        maxTokens: 1000
+        maxTokens: 500 // Reduced to avoid quota issues
     },
 
     // News API Configuration
@@ -33,7 +33,7 @@ export const config = {
     rateLimit: {
         binanceRequestsPerSecond: 10,
         coinglassRequestsPerSecond: 5,
-        openaiRequestsPerMinute: 20,
+        openaiRequestsPerMinute: 5, // Reduced to avoid quota issues
         newsRequestsPerHour: 100
     },
 
@@ -41,7 +41,7 @@ export const config = {
     analysis: {
         minimumConfidence: 70,
         maxCoinsToAnalyze: 20,
-        aiAnalysisEnabled: true,
+        aiAnalysisEnabled: false, // Temporarily disabled for deployment
         newsAnalysisEnabled: true,
         technicalIndicators: {
             bollinger: {
@@ -62,11 +62,11 @@ export const config = {
 
     // AI Analysis settings
     ai: {
-        signalValidationEnabled: true,
+        signalValidationEnabled: false, // Temporarily disabled for deployment
         newsAnalysisEnabled: true,
         riskAssessmentEnabled: true,
-        maxNewsArticles: 5,
-        analysisTimeout: 10000 // 10 seconds
+        maxNewsArticles: 3, // Reduced to minimize API calls
+        analysisTimeout: 5000 // Reduced timeout
     }
 }
 
